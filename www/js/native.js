@@ -13,6 +13,7 @@ function onBatteryStatus(status) {
     modal.className = show ? "show" : "";
   };
   
+  
   const deviceReady = () => {
     window.screen.orientation.lock("landscape");
     window.addEventListener("batterystatus", onBatteryStatus, false);
