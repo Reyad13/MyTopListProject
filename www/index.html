@@ -29,6 +29,10 @@
 
         <meta charset="utf-8">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -64,20 +68,20 @@
               }
             });
           </script>
-        <title>Classement carte FUT 22</title>
+        <title>Mes top cartes FUT 22</title>
     </head>
     <body>
-    <nav class="navbar navbar-dark bg-primary" style="background-image: linear-gradient(to bottom, #0478ef, #fefeff);">
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;" >
       <div class="container-fluid">
       <a class="navbar-brand" href="">
-        <img src=/img/logo.png>
+        <img src=./img/logo.png>
     </a>
   </div>
     </nav>
     <main class="container-fluid">
         <div class="row">
           <div class="col">
-            <h1>Mes cartes : </h1>
+            <h1>Mes Cartes FUT 22 </h1><br>
           </div>
         </div>
         <div class="row" id="list"></div>
@@ -85,10 +89,27 @@
 
     <button id="ajout" class="boutonAjout">+</button>
 
-    <div class="hidden page" id="Accueil"></div>
+    <div class="hidden page" id="Accueil">
+      <h1>Accueil</h1>
+      <div  id="titresTop">
+      </div>
+      
+    </div>
+
+
+    <div class="hidden page" id="infosTop">
+      <h1>Ma carte </h1><br>
+
+      <div id="carte-infos">
+        
+      </div>
+
+    </div>
     
-    
-    <div class="hidden page" id="FormulaireAjout">Formulaire d'ajout
+
+
+
+    <div class="hidden page" id="FormulaireAjout">
       <form class="formulaireAjout">
 
         <div class="form-group">
@@ -135,8 +156,8 @@
       </form>
     </div>
     
-        <script src="cordova.js"></script>
         <script src="js/router.js"></script>
+        <script src="js/affichage.js"></script>
         <script src="js/fifa.js"></script>
         <script src="js/index.js"></script>
         <script src="js/native.js"></script>

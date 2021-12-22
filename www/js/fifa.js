@@ -38,3 +38,4 @@ const newCard = (e) => {
         $("#ajout").removeClass("hidden");
 
 }
+

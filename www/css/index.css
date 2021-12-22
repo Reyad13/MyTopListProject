@@ -23,9 +23,7 @@
 body {
     -webkit-touch-callout: none;               
     -webkit-text-size-adjust: none;             
-    -webkit-user-select: none;                  
-    background-color:#FDF1B8;
-    background-image: linear-gradient(to bottom, #fefeff 17%, #0478ef);
+    -webkit-user-select: none; 
     font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
     font-size:12px;
     height:100vh;
@@ -66,6 +64,7 @@ h1 {
     overflow:visible;
     padding:0px;
     text-align:center;
+    font-family: 'Oswald', sans-serif;
 }
 
 .event {
@@ -113,16 +112,29 @@ h1 {
 
 .boutonAjout
 {
-position: fixed;
-    right: 0;
-    bottom: 0;
-    padding: 10;
-    font-size: 150px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 50%;
     border: none;
-    background: none;
+    width: 70px;
+    height: 70px;
+    color: #e3f2fd;
+    background-color: #3c3c3c;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 
 .formulaireAjout
 {
     padding: 15% 5% 0% 5%;
+}
+
+#titresTop
+{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 20%;
 }

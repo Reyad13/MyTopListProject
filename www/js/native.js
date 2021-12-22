@@ -20,8 +20,13 @@ function onBatteryStatus(status) {
     document.addEventListener("offline", () => toogleModalOffline(true), false);
     document.addEventListener("online", () => toogleModalOffline(false), false);
     console.log('Orientation is ' + screen.orientation.type);
-    if ("browser" == device.platform )  {}
-    else  {
+  
+  if ("browser" == device.platform )  
+  {
+    
+  }
+  else  
+  {
     screen.orientation.lock('portrait')
-    } 
+  } 
 };
