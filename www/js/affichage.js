@@ -1,16 +1,17 @@
-// create needed constants
-const titresTop = document.getElementById('titresTop');
-
-
-
-
-
 function afficherInfos() {
     var carteInfos = document.getElementById("carte-infos")
     var div = document.createElement("div")
     div.setAttribute("class", "carte-info")
 
+
+    
     let bdd = JSON.parse(localStorage.bdd)
+    //Récupère le titre dans le localStorage
+    var monTitre = localStorage.getItem('titre');
+    // Filtre le tableau afin de récuperer les infos du titre que l'on a choisit
+    var newbdd = bdd.filter(function(mesInfosTop){
+         return mesInfosTop.titre == monTitre;
+        });
     var elements = []
     var elements2 = []
     var elements3 = []
@@ -19,7 +20,8 @@ function afficherInfos() {
     var elements6 = []
     var elements7 = []
     var elements8 = []
-    bdd.forEach((carteInfo, i) => {
+    
+    newbdd.forEach((carteInfo, i) => {
         elements[i] = document.createElement("h3")
         elements2[i] = document.createElement("p")
         elements3[i] = document.createElement("p")
@@ -44,24 +46,24 @@ function afficherInfos() {
         div.appendChild(elements6[i])
         div.appendChild(elements7[i])
         div.appendChild(elements8[i])
+        
     })
     carteInfos.appendChild(div)
 }
 
 
+const titresTop = document.getElementById('titresTop');
 
-
-
-// define the nameDisplayCheck() function
 function titreCheck() {
-  // check whether the 'name' data item is stored in web Storage
   if(localStorage.bdd) {
-    // If it is, display personalized greeting
     let tableauTop = JSON.parse(localStorage.bdd);
     var elements =  []
     tableauTop.forEach((element, index) => {
         elements[index] = document.createElement("h3");
         elements[index].addEventListener("click", () => {
+            // Sauvegarde du titre dans le localStorage lors du click
+            localStorage.setItem('titre',element.titre);
+            localStorage.getItem('titre');
             afficherInfos(); 
             $("#infosTop").removeClass("hidden");
             $("#Accueil").addClass("hidden");
@@ -73,9 +75,9 @@ function titreCheck() {
     });
   } 
 }
-// run nameDisplayCheck() when the DOM first loads to check wether a personal name was previously
-// set, and if so display the personalized greeting. If not, show the generic greeting
 document.body.onload = titreCheck;
+
+
 
 
 

@@ -1,3 +1,6 @@
+
+
+
 const newCard = (e) => {
 
     var inputTitre = document.getElementById("Titre").value;
@@ -8,6 +11,7 @@ const newCard = (e) => {
     var inputDriblle = document.getElementById("Dribble").value;
     var inputDefense = document.getElementById("Defense").value;
     var inputPhysique = document.getElementById("Physique").value;
+ 
 
 
         var top = {
@@ -18,7 +22,7 @@ const newCard = (e) => {
             passe: inputPasse,
             dribble: inputDriblle,
             defense: inputDefense,
-            physique: inputPhysique,       
+            physique: inputPhysique,   
         }
         if (localStorage.bdd)
         {
